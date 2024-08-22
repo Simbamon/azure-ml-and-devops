@@ -11,10 +11,10 @@ variables:
 jobs:
 - job: SubmitAzureMLJob
   displayName: Submit AzureML Job
-  environment: simbamon-dev
   timeoutInMinutes: 300
   pool:
     vmImage: ubuntu-latest
+  environment: 'simbamon-dev'
   steps:
   - task: UsePythonVersion@0
     displayName: Use Python >=3.8
