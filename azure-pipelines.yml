@@ -11,7 +11,7 @@ variables:
 jobs:
 - job: SubmitAzureMLJob
   displayName: Submit AzureML Job
-  deployment: simbamon-dev
+  environment: simbamon-dev
   timeoutInMinutes: 300
   pool:
     vmImage: ubuntu-latest
