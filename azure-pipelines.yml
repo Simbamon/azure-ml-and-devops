@@ -16,13 +16,14 @@ jobs:
     vmImage: ubuntu-latest
   environment: 'simbamon-dev'
   strategy:
-      runOnce:
-        deploy:
-          steps:
-            - task: UsePythonVersion@0
-              displayName: Use Python >=3.8
-              inputs:
-                versionSpec: '>=3.8'
+    runOnce:
+      deploy:
+        steps:
+          - checkout: self
+          - task: UsePythonVersion@0
+            displayName: Use Python >=3.8
+            inputs:
+              versionSpec: '>=3.8'
 
           - bash: |
               set -ex
