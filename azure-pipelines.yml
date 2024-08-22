@@ -9,7 +9,7 @@ variables:
   workspace: 'az_ml_workspace' # replace with your workspace name
 
 jobs:
-- job: SubmitAzureMLJob
+- deployment: SubmitAzureMLJob
   displayName: Submit AzureML Job
   timeoutInMinutes: 300
   pool:
